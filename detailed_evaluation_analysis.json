@@ -1,0 +1,134 @@
+{
+  "analysis_timestamp": "2025-06-24T12:56:05.689890",
+  "model_name": "Qwen2.5-Math-1.5B-Instruct",
+  "task": "amc23",
+  "comparison": {
+    "modified_logits_run": {
+      "run_name": "Modified_Logits_2025-06-24",
+      "total_samples": 40,
+      "response_length_stats": {
+        "characters": {
+          "mean": 1756.525,
+          "median": 1861.0,
+          "std": 528.132179832852,
+          "min": 825,
+          "max": 2852
+        },
+        "words": {
+          "mean": 364.85,
+          "median": 361.5,
+          "std": 132.85190062622365,
+          "min": 141,
+          "max": 717
+        },
+        "estimated_tokens": {
+          "mean": 438.725,
+          "median": 465.0,
+          "std": 132.0456336839655,
+          "min": 206,
+          "max": 713
+        }
+      },
+      "word_frequency": {
+        "total_unique_words": 781,
+        "most_common_20": [
+          [
+            "the",
+            763
+          ],
+          [
+            "of",
+            390
+          ],
+          [
+            "is",
+            287
+          ],
+          [
+            "frac",
+            269
+          ],
+          [
+            "cdot",
+            251
+          ],
+          [
+            "x",
+            247
+          ],
+          [
+            "a",
+            235
+          ],
+          [
+            "we",
+            203
+          ],
+          [
+            "to",
+            176
+          ],
+          [
+            "and",
+            174
+          ],
+          [
+            "n",
+            129
+          ],
+          [
+            "b",
+            119
+          ],
+          [
+            "d",
+            111
+          ],
+          [
+            "in",
+            110
+          ],
+          [
+            "log",
+            106
+          ],
+          [
+            "y",
+            100
+          ],
+          [
+            "for",
+            93
+          ],
+          [
+            "by",
+            90
+          ],
+          [
+            "that",
+            86
+          ],
+          [
+            "so",
+            80
+          ]
+        ]
+      },
+      "questions_and_responses": [
+        {
+          "index": 0,
+          "question": "Question: The weight of $\\frac{1}{3}$ of a large pizza together with $3 \\frac{1}{2}$ cups of orange slices is the same as the weight of $\\frac{3}{4}$ of a large pizza together with $\\frac{1}{2}$ cup of orange slices. A cup of orange slices weighs $\\frac{1}{4}$ of a pound. What is the weight, in pounds, of a large pizza? The answer can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m-n$?\nStep-by-Step Answer:",
+          "full_prompt": "<|im_start|>system\nPlease reason step by step, and put your final answer within \\boxed{}.<|im_end|>\n<|im_start|>user\nQuestion: The weight of $\\frac{1}{3}$ of a large pizza together with $3 \\frac{1}{2}$ cups of orange slices is the same as the weight of $\\frac{3}{4}$ of a large pizza together with $\\frac{1}{2}$ cup of orange slices. A cup of orange slices weighs $\\frac{1}{4}$ of a pound. What is the weight, in pounds, of a large pizza? The answer can be written in the form $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m-n$?\nStep-by-Step Answer:<|im_end|>\n<|im_start|>assistant\n",
+          "response": "To determine the weight of a large pizza, let's denote the weight of a large pizza by \\( P \\) pounds and the weight of a cup of orange slices by \\( O \\) pounds. We are given that \\( O = \\frac{1}{4} \\) pound.\n\nThe problem states that the weight of \\(\\frac{1}{3}\\) of a large pizza together with \\(3 \\frac{1}{2}\\) cups of orange slices is the same as the weight of \\(\\frac{3}{4}\\) of a large pizza together with \\(\\frac{1}{2}\\) cup of orange slices. We can express this relationship with the following equation:\n\n\\[\n\\frac{1}{3}P + 3 \\frac{1}{2}O = \\frac{3}{4}P + \\frac{1}{2}O\n\\]\n\nFirst, convert the mixed number \\( 3 \\frac{1}{2} \\) to an improper fraction:\n\n\\[\n3 \\frac{1}{2} = 3 + \\frac{1}{2} = \\frac{6}{2} + \\frac{1}{2} = \\frac{7}{2}\n\\]\n\nSubstitute \\( O = \\frac{1}{4} \\) into the equation:\n\n\\[\n\\frac{1}{3}P + \\frac{7}{2} \\cdot \\frac{1}{4} = \\frac{3}{4}P + \\frac{1}{2} \\cdot \\frac{1}{4}\n\\]\n\nSimplify the terms involving \\( O \\):\n\n\\[\n\\frac{1}{3}P + \\frac{7}{8} = \\frac{3}{4}P + \\frac{1}{8}\n\\]\n\nTo eliminate the fractions, find a common denominator for all terms, which is 24. Multiply every term by 24:\n\n\\[\n24 \\cdot \\frac{1}{3}P + 24 \\cdot \\frac{7}{8} = 24 \\cdot \\frac{3}{4}P + 24 \\cdot \\frac{1}{8}\n\\]\n\nSimplify each term:\n\n\\[\n8P + 21 = 18P + 3\n\\]\n\nRearrange the equation to isolate \\( P \\):\n\n\\[\n21 - 3 = 18P - 8P\n\\]\n\n\\[\n18 = 10P\n\\]\n\nSolve for \\( P \\):\n\n\\[\nP = \\frac{18}{10} = \\frac{9}{5}\n\\]\n\nThe weight of a large pizza is \\(\\frac{9}{5}\\) pounds. To find \\( m - n \\) where \\( P = \\frac{m}{n} \\) and \\( m \\) and \\( n \\) are relatively prime, we have \\( m = 9 \\) and \\( n = 5 \\). Therefore:\n\n\\[\nm - n = 9 - 5 = 4\n\\]\n\nThe final answer is:\n\n\\[\n\\boxed{4}\n\\]",
+          "target": " 4.0",
+          "response_analysis": {
+            "chars": 1650,
+            "words": 315,
+            "estimated_tokens": 412
+          },
+          "metrics": {
+            "extractive_match": 1.0
+          },
+          "specifics": {
+            "extracted_predictions": [
+              
