@@ -1,5 +1,5 @@
 # # With all generation parameters
-# python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --seed 0 --temperature 0 --top_p 1 --use_logits_processor --reasoning_boost 5.0
+# python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --seed 0 --temperature 0 --top_p 1 --use_logits_processor --reasoning_boost 1.15
 
 # # With just temperature
 # python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --temperature 0.1
@@ -13,16 +13,25 @@
 # python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23
 
 # # With logits processor for reasoning token boost
-# python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --use_logits_processor --reasoning_boost 5.0 --penalty_factor -1000.0
+# python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --use_logits_processor --reasoning_boost 1.2 --penalty_factor -1000.0
 
 # With logits processor using default settings
 # python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --use_logits_processor
 
 # # With custom boost and penalty factors
-# python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --use_logits_processor --reasoning_boost 10.0 --penalty_factor -500.0
+# python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --use_logits_processor --reasoning_boost 1.1 --penalty_factor -500.0
 
 # # Combined with other generation parameters
 # python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --use_logits_processor --temperature 0.7 --seed 42
+
+
+
+# USE THESE COMMANDS FOR EVAL
+
+# python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --temperature 0.7 --top_p 0.8
+# python eval.py --model Qwen/Qwen2.5-Math-1.5B-Instruct --use_chat_template --task amc23 --temperature 0.7 --top_p 0.8 --use_logits_processor --reasoning_boost 1.1
+
+
 from datetime import timedelta
 import argparse
 from pathlib import Path
