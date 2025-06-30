@@ -98,8 +98,8 @@ def create_reasoning_token_logits_processor(tokenizer, boost_factor=5.0, penalty
         TokenLogitsProcessor: Configured logits processor
     """
     # Find token IDs for reasoning-related strings
-    reasoning_strings = ["think", "reason", "analyze", "consider", "however", "but", "instead", "Think", "Reason", "Analyze", "Consider", "However", "But", "Instead"]
-    unwanted_strings = []
+    reasoning_strings = ["however", "but", "instead", "However", "But", "Instead"]
+    unwanted_strings = ["<|endoftext|>"]
     
     reasoning_mappings = find_token_ids(tokenizer, reasoning_strings)
     unwanted_mappings = find_token_ids(tokenizer, unwanted_strings)
