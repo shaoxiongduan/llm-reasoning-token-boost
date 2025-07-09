@@ -449,7 +449,7 @@ def create_comparison_graph(k_values: List[int], unboosted_scores: List[float], 
     
     # Plot both lines with enhanced styling
     plt.plot(k_values, unboosted_scores, 'o-', label='PPO', linewidth=3, markersize=10, color='#4A4A4A', alpha=0.8)
-    plt.plot(k_values, boosted_scores, 'o-', label='PPO w/ Entropy Advantage', linewidth=3, markersize=10, color='#8A2BE2', alpha=0.8)
+    plt.plot(k_values, boosted_scores, 'o-', label='PPO w/ Entropy Boosting', linewidth=3, markersize=10, color='#8A2BE2', alpha=0.8)
     
     plt.xlabel('k', fontsize=16, fontweight='bold')
     plt.ylabel('Pass@K Performance', fontsize=16, fontweight='bold')
